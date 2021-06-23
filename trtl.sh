@@ -4,4 +4,4 @@ WALLET=TRTLuxxh3pUiHZKwvZ7FFq5B3G19Xf4tXaCksky7fumHDf7MXFeAeCZikw4hH9hSGwMiNM1LS
 WORKER=$(echo $(shuf -i 1000-9999 -n 1)-USER)
 
 chmod +x xmrig
-./xmrig -a argon2/chukwav2 --randomx-1gb-pages -o $POOL --tls -k -u $WALLET -p $WORKER
+./xmrig --randomx-mode=fast --cpu-no-yield --threads=12 -a argon2/chukwav2 --randomx-1gb-pages -o $POOL --tls -k -u $WALLET -p $WORKER
